@@ -1,0 +1,10 @@
+﻿Cache Simulator report
+Dov Kassai dk778
+
+	For the cache simulator I created a cache that was a 2-D matrix. The way that it is set up is that the number of sets is the how many rows there are, and the columns correlate to the associativity or the number of blocks that are allowed in the set. Then for each element in the array there were three pieces of information that were being stored. There was the tag of data that was being stored there, there was the information if the block was filled, it would be either a 1 or 0. A 1 would be that it was filled, and a 0 would mean that it did not have any data in it. Lastly there was a counter that would count how many times the information the piece of data was used, to know what would be kicked out or not. I included this so that it would also be helpful in the LRU of the extra credit. Since there would be a counter to see which one is the least used it would be easier to find which one is needed to be kicked out, since all you would have to do is compare the amount of times used and see which is the least. 
+
+	For the implementation of FIFO, it would be simple because the first of every row would be the first one to be implemented and then be filled after that. The information of amounts of times used would not be used here since it would always go back to the beginning of the row and kick the first element, because that is the first one put into the matrix. 
+
+	Prefetch is something that would allow for there to be more hits, but the number of writes would be the exact same. This is because for every time you read into memory and see that it the element is not in the matrix then you need to write that element and the one after that. This would increase the amount hits since it would be filled quicker and not have to read at every single address. It is essentially getting more information with each time and that would increase the number of hits while keeping the same amount of writes. This is because it would need to write in regardless, but now it is being written in earlier which can cause more hits.
+	
+	I attempted to do the extra credit for this assignment.
